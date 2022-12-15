@@ -2,16 +2,13 @@
 // loading
 //==================
 
-var bg = $('.loading'),
-    loader = $('.loading__icon');
-/* ローディング画面の非表示を解除 */
-bg.removeClass('is-hide');
-loader.removeClass('is-hide');
-
 /* 読み込み完了 */
 $(window).on('load', function(){
-    bg.fadeOut(800);
-    loader.fadeOut(300);
+
+    setTimeout(() => {
+        $(".loading").fadeOut(800);
+    }, 1000)
+
 });
 
 /* 10秒経ったら強制的にローディング画面を非表示にする */

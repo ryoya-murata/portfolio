@@ -70,11 +70,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
 
-
-
   <div class="loading">
-    <div class="loading__icon"></div><!-- /.loading-icon -->
-  </div><!-- /.loading -->
+    <div class="cubic active">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
 
   <!-- header -->
   <header class="header">
@@ -139,7 +145,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <span class="default">お問い合わせする</span>
             <span class="hovering">Contact</span>
           </a>
-            <!-- /.button top__button -->
+          <!-- /.button top__button -->
         </div><!-- /.top__button-wrap -->
       </div><!-- /.top__img-wrap -->
     </div><!-- /.top -->
@@ -334,7 +340,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div><!-- /.section__heads -->
         <div class="section__desc section__desc--contact">下記のお問い合わせフォームからご連絡よろしくお願いします。</div><!-- /.section__desc -->
         <form id="form" action="" class="form" method="POST" novalidate>
-        <input type="hidden" name="scroll_top" value="" class="st">
+          <input type="hidden" name="scroll_top" value="" class="st">
           <div class="form__table-wrap">
             <table class="form__table">
               <tr class="form__item">
@@ -343,7 +349,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <td class="form__input-wrap">
                   <input type="text" class="form__input" id="form_name" name="name" value="<?php echo htmlspecialchars($post['name']); ?>">
                   <?php if ($error['name'] === 'blank') : ?>
-                    <p class="error-msg">※お名前をご記入ください</p><!-- /.err-msg -->
+                  <p class="error-msg">※お名前をご記入ください</p><!-- /.err-msg -->
                   <?php endif; ?>
                   <p class="form__example">例）山田 太郎</p><!-- /.form__example -->
                 </td><!-- /.form__input-wrap -->
@@ -354,7 +360,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <td class="form__input-wrap">
                   <input type="text" class="form__input" id="form_ruby" name="ruby" value="<?php echo htmlspecialchars($post['ruby']); ?>">
                   <?php if ($error['ruby'] === 'blank') : ?>
-                    <p class="error-msg">※ふりがなをご記入ください</p><!-- /.err-msg -->
+                  <p class="error-msg">※ふりがなをご記入ください</p><!-- /.err-msg -->
                   <?php endif; ?>
                   <p class="form__example">例）ヤマダ　タロウ</p><!-- /.form__example -->
                 </td><!-- /.form__input-wrap -->
@@ -365,10 +371,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <td class="form__input-wrap">
                   <input type="email" class="form__input" id="form_email" name="email" value="<?php echo htmlspecialchars($post['email']); ?>">
                   <?php if ($error['email'] === 'blank') : ?>
-                    <p class="error-msg">※メールアドレスをご記入ください</p><!-- /.err-msg -->
+                  <p class="error-msg">※メールアドレスをご記入ください</p><!-- /.err-msg -->
                   <?php endif; ?>
                   <?php if ($error['email'] === 'email') :?>
-                    <p class="error-msg">※メールアドレスを正しくご記入ください</p><!-- /.err-msg -->
+                  <p class="error-msg">※メールアドレスを正しくご記入ください</p><!-- /.err-msg -->
                   <?php endif; ?>
                   <p class="form__example">例）aaa@example.com</p><!-- /.form__example -->
                 </td><!-- /.form__input-wrap -->
@@ -397,6 +403,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </section><!-- /.section contact -->
   </main><!-- /.main -->
 
- 
+
 
   <?php include './footer.php'; ?>
